@@ -1,0 +1,104 @@
+EJERCICIO 1301:
+
+# funciones.py: 
+def prueba(x,y):
+print(a,b)
+x= x +1
+У = У + 2
+return(x,y)
+
+# programa.py:
+from funciones import *
+a = int(input("Ingrese un número entero: "))
+b = int(input ("Ingrese un número entero: "))
+
+For i in range(3):
+Print(prueba(a,b))
+a = a + 2 
+b = b +2
+
+EJERCICIO 1302:
+
+# funciones.py:
+def prueba(a,b):
+a = a + 1
+b=b + 2
+return(a,b)
+
+# programa.py:
+from funciones import *
+
+a = int(input("Ingrese un numero entero: "))
+b = int(input ("Ingrese un numero entero: "))
+
+For i in range(3): 
+a, b = (prueba(a,b))
+a = a + 2 
+b = b + 2
+
+EJERCICIO 1303:
+
+# funciones.py 
+def validar_dni(dni):
+cantidad = 0
+while dni != 0:
+cantidad = cantidad + 1
+dni = dni // 10
+return cantidad == 8
+
+# programa.py:
+from funciones import *
+mayor =- 1
+dni = int(input("DNI: "))
+while dni !=0:
+if validar_dni (dni):
+nombre = input("Nombre: ")
+edad = int(input("Edad: **))
+if edad > mayor:
+mayor = edad
+nombre_mayor - nombre
+else:
+print("DNI inválido. Vuelva a ingresar.")
+dni = int(input(“DNI :”) 
+print(“Nombre de la persona mayor:”, nombre_mayor)
+
+EJERICIO 1304:
+
+# ----- OPCIÓN 1 --
+# funciones.py:
+def escribe_media():
+media = (a + b) / 2
+print("La media de ", a, " y", b, " es: ", media)
+return
+
+# programa.py:
+from funciones import * 
+a = 3
+b = 5
+escribe_media()
+
+
+#—-- OPCIÓN 2 -----
+# funciones.py: 
+def escribe_media(x, y):
+media = (x + y) / 2
+print("La media de ", a, " y ", b, " es: ", media)
+return 
+
+# programa.py:
+from funciones import *
+a = 3
+b = 5
+escribe_media(a, b)
+
+# ----- OPCIÓN 3 -----
+# funciones.py:
+def calcula_media(x, y):
+resultado = (x + y) / 2
+return resultado
+
+# programa.py:
+from funciones import *
+a = 3
+b = 5
+print ("La media de ", a, " y ", b, " es: ", calcula_media(a, b))
