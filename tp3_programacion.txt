@@ -1,14 +1,14 @@
 EJERCICIO 1301:
 
 # funciones.py: 
-def prueba(x,y):
+def prueba(x,y): 
 print(a,b)
-x= x +1
-У = У + 2
-return(x,y)
+x = x + 1 
+У = У + 2 
+return(x,y) 
 
 # programa.py:
-from funciones import *
+from funciones import * 
 a = int(input("Ingrese un número entero: "))
 b = int(input ("Ingrese un número entero: "))
 
@@ -16,6 +16,57 @@ For i in range(3):
 Print(prueba(a,b))
 a = a + 2 
 b = b +2
+
+vuelta 1:
+a es igual a 1
+b es igual a 3
+
+entra al for, son 3 vueltas
+
+vuelta 1:
+imprime el resultado de llamar a la funcion prueba con los argumentos 1 y 3
+entra a prueba con x igual a 1 e y igual a 3
+imprime 1 y 3
+x es igual a 1 + 1 entonces ahora x es 2 
+y es igual a 3 + 2 entonces ahora y es 5 
+devuelve 2,5 
+
+vuelta 2: 
+a es 2 
+b es 4
+entra al for:
+imprime el resultado de la funcion prueba con 2 y 4
+x es igual a 2 
+y es igual a 4 
+imprime 2 y 4 
+ahora x es igual a 2 + 1 entonces ahora x es 3
+ahora y es igual 2 + 2 entonces ahora y es 4
+devuelve 3, 4
+
+vuelta 3:
+a es 4 
+b es 6
+entra al for:
+imprime el resultado de la funcion prueba con 4 y 6
+x es igual a 4
+y es igual a 6
+imprime 4 y 6
+ahora x es igual a 4 + 1 entonces ahora x es 5
+ahora y es igual a 6 + 2 entonces ahora y es 8
+devuelve 5, 8
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 EJERCICIO 1302:
 
