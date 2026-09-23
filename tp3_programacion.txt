@@ -39,8 +39,8 @@ imprime el resultado de la funcion prueba con 2 y 4
 x es igual a 2 
 y es igual a 4 
 imprime 2 y 4 
-ahora x es igual a 2 + 1 entonces ahora x es 3
-ahora y es igual 2 + 2 entonces ahora y es 4
+ahora x es igual a 2 + 1 entonces la suma es 3 ahora x es 3
+ahora y es igual 2 + 2 entonces la suma es 4 ahora y es 4
 devuelve 3, 4
 
 vuelta 3:
@@ -51,21 +51,9 @@ imprime el resultado de la funcion prueba con 4 y 6
 x es igual a 4
 y es igual a 6
 imprime 4 y 6
-ahora x es igual a 4 + 1 entonces ahora x es 5
-ahora y es igual a 6 + 2 entonces ahora y es 8
+ahora x es igual a 4 + 1 entonces la suma es 5 ahora x es 5
+ahora y es igual a 6 + 2 entonces la suma es 8 ahora y es 8
 devuelve 5, 8
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 EJERCICIO 1302:
@@ -73,7 +61,7 @@ EJERCICIO 1302:
 # funciones.py:
 def prueba(a,b):
 a = a + 1
-b=b + 2
+b = b + 2
 return(a,b)
 
 # programa.py:
@@ -87,10 +75,45 @@ a, b = (prueba(a,b))
 a = a + 2 
 b = b + 2
 
+
+3 vueltas por el for i in range 3: 
+
+vuelta 1:
+define prueba como a y b
+a es igual a + 1 que le pondremos a 2 entonces seria 2 = 2 + 1
+lo mismo con b, 4 = 4 + 2
+devuelve 3,6 que serian la SUMA a = 3 y b = 6 
+
+import * mala practica, pero importa todo el modulo entonces puede ser importado a otros módulos o al módulo principal
+
+2 = 2 + 2
+4 = 4 + 2
+
+vuelta 2:
+a es igual a +1 y sera 3 + 1 = 4
+b es igual b + 2 sera 6 + 2 = 8 
+devuelve 4,8 que es la suma de a y la suma de b 
+
+import * mala practica, pero importa todo el modulo entonces puede ser importado a otros módulos o al módulo principal
+
+4 = 4 + 2
+6 = 6 + 2 
+
+vuelta 3:
+a es igual a + 1 y sera 8 + 1 = 9 
+b es igual b + 2 y sera 5 + 2 = 7 
+devuelve 9, 7 que es la suma en la variable a y en la variable b
+
+import * mala practica, pero importa todo el modulo entonces puede ser importado a otros módulos o al módulo principal
+
+8 = 8 + 2 
+5 = 5 + 2 
+
+
 EJERCICIO 1303:
 
 # funciones.py 
-def validar_dni(dni):
+def validar_dni(dni): 
 cantidad = 0
 while dni != 0:
 cantidad = cantidad + 1
@@ -98,7 +121,7 @@ dni = dni // 10
 return cantidad == 8
 
 # programa.py:
-from funciones import *
+from funciones import * 
 mayor =- 1
 dni = int(input("DNI: "))
 while dni !=0:
@@ -113,6 +136,57 @@ print("DNI inválido. Vuelva a ingresar.")
 dni = int(input(“DNI :”) 
 print(“Nombre de la persona mayor:”, nombre_mayor)
 
+
+
+primero define la funcion validar_dni(dni)
+arranca la variable cantidad en 0 
+entra al while porque dni es diferente de 0 ingresando el 34567890
+cantidad = cantidad + 1 en cada vuelta aumenta 1
+dni = dni // 10 se divide por 10 
+vuelta       despues de divivir por 10 dni         cantidad
+1                       3456789                      1
+2                       345678                       2
+3                       34567                        3
+4                       3456                         4
+5                        345                         5
+6                        34                           6
+7                         3                           7
+8                         0                          8
+cuando el dni llega a 0 termina 
+return cantidad == 8
+compara si la cantidad de digitos es igual a 8 cantidad es 8 entonces devuelve true osea el dni valido
+
+ahora programa.py 
+importa la función validar_dni que está en funciones.py, para poder utilizarla en este programa pero from funciones import* mala practica 
+la variable mayor comienza con -1 
+dni = int(input("dni: "))
+solicita un DNI e ingresa 34567890 y se guarda ese valor en la variable dni
+while dni != 0:
+el dni es distinto de 0 la condición es verdadera y entra al ciclo
+if validar_dni(dni):
+se llama a la función para comprobar si el dni tiene 8 digitos y com oel dni 34567890 tiene 8 digitos la función devuelve true y el programa entra al if
+nombre = input("nombre: ")
+se solicita el nombre de la persona y se ingresa maria gimenez  se guarda en la variable nombre
+edad = int(input("edad: "))
+se solicita la edad de la persona y se ingresa 18 se guarda en la variable edad
+if edad > mayor:
+se compara si la edad ingresada q es 18 es mayor que el valor de mayor que es -1 y como la condicion es verdadera entra al if
+mayor = edad
+variable mayor se actualiza y pasa a ser 21
+nombre_mayor = nombre
+se guarda carlos alberto sanchez en nombre_mayor reemplazando el nombre anterior porque es mayor edad
+dni = int(input("dni: "))
+el programa vuelve a solicitar otro dniy se ingresa 0
+while dni != 0:
+dni es 0 la condición es falsa y el ciclo termina
+print("nombre de la persona mayor:", nombre_mayor)
+el programa muestra el nombre de la persona que tiene la mayor edad entre los dnis validos entonces muetra nombre de la persona mayor: carlos alberto sanchez
+
+al ingresar el dni 345678233 la función cuenta 9 digitos y devuelve false porque el dni no tiene exactamente 8 digitos, el programa muestra el mensaje de dni inválido y solicita que se ingrese otro, la persona no se registra ni se compara su edad
+si se continua con los datos carlos alberto sanchez sigue siendo la persona de mayor edad 21 añaos
+
+
+
 EJERICIO 1304:
 
 # ----- OPCIÓN 1 --
@@ -126,7 +200,8 @@ return
 from funciones import * 
 a = 3
 b = 5
-escribe_media()
+escribe_media() 
+
 
 
 #—-- OPCIÓN 2 -----
@@ -142,6 +217,8 @@ a = 3
 b = 5
 escribe_media(a, b)
 
+
+
 # ----- OPCIÓN 3 -----
 # funciones.py:
 def calcula_media(x, y):
@@ -153,3 +230,34 @@ from funciones import *
 a = 3
 b = 5
 print ("La media de ", a, " y ", b, " es: ", calcula_media(a, b))
+
+
+
+la primera opcion no funciona porque:
+se crea una funcion escribe_media, intenta calcular a y b pero no estan definidas
+importa la funcion escribe_media de funciones.py
+a = 3 b = 5
+se llama a la funcion pero busca a y b dentro de funciones.py y da error
+
+
+la segunda opcion no funciona porque:
+se crea la funcion escribe_media y recibe x e y 
+calcula la media con los valores recibidos en x ey 
+se intenta mostrar a y b no estan definidas pero se definio x e y
+programa.py se importa la funcion y a=3 b = 5 llama a la funcion y pasa x = 3 y = 5 se hace la variable media = (3 + 5) / 2 pero despues intenta el print con a y b 
+y ahi no funciona pq tendria que ser con x e y 
+ 
+la tercera opcion si funciona porque:
+se crea la funcion calcula_media que recibe x e y 
+calcula la media de los dos valores recibidos
+programa.py importa la funcion calcula_media a=3 b=5 
+calcula_media(3,5) entonces x = 3 e y = 5
+resultado = (3 + 5) / 2
+resultado = 8 / 2
+resultado = 4.0
+print("la media de ", 3, " y ", 5, " es: ", 4.0)
+la media de 3 y 5 es: 4.0 
+
+
+
+
